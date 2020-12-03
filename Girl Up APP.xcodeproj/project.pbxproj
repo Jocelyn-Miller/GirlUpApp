@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		378F3A16256D4A9E00666934 /* incidentReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F3A15256D4A9E00666934 /* incidentReport.swift */; };
 		37F4E9C8255986C500130957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4E9C7255986C500130957 /* AppDelegate.swift */; };
 		37F4E9CA255986C500130957 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4E9C9255986C500130957 /* SceneDelegate.swift */; };
 		37F4E9CC255986C500130957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4E9CB255986C500130957 /* ViewController.swift */; };
@@ -15,6 +16,9 @@
 		37F4E9D4255986C700130957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F4E9D2255986C700130957 /* LaunchScreen.storyboard */; };
 		37F4E9DF255986C700130957 /* Girl_Up_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4E9DE255986C700130957 /* Girl_Up_APPTests.swift */; };
 		37F4E9EA255986C700130957 /* Girl_Up_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4E9E9255986C700130957 /* Girl_Up_APPUITests.swift */; };
+		37F4EA47255ADD7000130957 /* InfoAndStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4EA46255ADD7000130957 /* InfoAndStatistics.swift */; };
+		37F4EA4C255ADD9800130957 /* emotionalResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4EA4B255ADD9800130957 /* emotionalResources.swift */; };
+		37F4EA51255ADDB000130957 /* reportingResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4EA50255ADDB000130957 /* reportingResources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		378F3A15256D4A9E00666934 /* incidentReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = incidentReport.swift; sourceTree = "<group>"; };
 		37F4E9C4255986C500130957 /* Girl Up APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Girl Up APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F4E9C7255986C500130957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F4E9C9255986C500130957 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		37F4E9E5255986C700130957 /* Girl Up APPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Girl Up APPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F4E9E9255986C700130957 /* Girl_Up_APPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Girl_Up_APPUITests.swift; sourceTree = "<group>"; };
 		37F4E9EB255986C700130957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37F4EA46255ADD7000130957 /* InfoAndStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAndStatistics.swift; sourceTree = "<group>"; };
+		37F4EA4B255ADD9800130957 /* emotionalResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emotionalResources.swift; sourceTree = "<group>"; };
+		37F4EA50255ADDB000130957 /* reportingResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reportingResources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +110,11 @@
 				37F4E9C7255986C500130957 /* AppDelegate.swift */,
 				37F4E9C9255986C500130957 /* SceneDelegate.swift */,
 				37F4E9CB255986C500130957 /* ViewController.swift */,
+				378F3A15256D4A9E00666934 /* incidentReport.swift */,
 				37F4E9CD255986C500130957 /* Main.storyboard */,
+				37F4EA50255ADDB000130957 /* reportingResources.swift */,
+				37F4EA4B255ADD9800130957 /* emotionalResources.swift */,
+				37F4EA46255ADD7000130957 /* InfoAndStatistics.swift */,
 				37F4E9D0255986C700130957 /* Assets.xcassets */,
 				37F4E9D2255986C700130957 /* LaunchScreen.storyboard */,
 				37F4E9D5255986C700130957 /* Info.plist */,
@@ -258,7 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37F4EA47255ADD7000130957 /* InfoAndStatistics.swift in Sources */,
+				378F3A16256D4A9E00666934 /* incidentReport.swift in Sources */,
 				37F4E9CC255986C500130957 /* ViewController.swift in Sources */,
+				37F4EA51255ADDB000130957 /* reportingResources.swift in Sources */,
+				37F4EA4C255ADD9800130957 /* emotionalResources.swift in Sources */,
 				37F4E9C8255986C500130957 /* AppDelegate.swift in Sources */,
 				37F4E9CA255986C500130957 /* SceneDelegate.swift in Sources */,
 			);
@@ -434,7 +450,6 @@
 		37F4E9EF255986C700130957 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZN2276ZGAF;
@@ -453,7 +468,6 @@
 		37F4E9F0255986C700130957 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZN2276ZGAF;
