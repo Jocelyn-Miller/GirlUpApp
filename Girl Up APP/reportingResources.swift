@@ -11,27 +11,15 @@ import MessageUI
 class reportingResources: UIViewController, MFMailComposeViewControllerDelegate
 {
     let PDphoneNumber = 6108531298
-    
-    @IBOutlet weak var nameTextField: UITextField!
-    
-    @IBOutlet weak var cellTextField: UITextField!
-    
-    @IBOutlet weak var addressTextField: UITextField!
-    
-    @IBOutlet weak var dateTextField: UITextField!
-    
-    @IBOutlet weak var timeTextField: UITextField!
-    
-    @IBOutlet weak var profileTextField: UITextField!
-    
-    @IBOutlet weak var incidentTextField: UITextField!
-    var completeIncident = ""
+    var incidentComplete = UserDefaults.standard.string(forKey: "completeIncident")
     
     override func viewDidLoad()
     {
+        incidentComplete = UserDefaults.standard.string(forKey: "completeIncident")
+        
         super.viewDidLoad()
-
-    }
+       // var completedReport = IncidentReport(theName: <#T##String#>, theAddress: <#T##String#>, theNumber: <#T##Int#>, theTime: <#T##String#>, theProfile: <#T##String#>, theIncident: <#T##String#>, theDate: <#T##String#>)
+}
     
     @IBAction func callPolice(_ sender: UIButton)
     {
@@ -83,26 +71,7 @@ class reportingResources: UIViewController, MFMailComposeViewControllerDelegate
     
     @IBAction func EmailPolice(_ sender: UIButton)
     {
-        if MFMailComposeViewController.canSendMail()
-        {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(["Info@Havpd.org"])
-            mail.setMessageBody("<p>Insert the completed Incident report here</p>", isHTML: true)
-
-            present(mail, animated: true)
-        } else {
-            let alertWin = UIAlertController(title: "email send failed", message: nil, preferredStyle: .alert)
-           alertWin.addAction(UIAlertAction(title: NSLocalizedString("fork", comment: "Default action"), style: .default, handler: { _ in
-           NSLog("The \"OK\" alert occured.")
-           }))
-            self.present(alertWin, animated: true, completion: nil)
-        }
-        
-        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
-        {
-            controller.dismiss(animated: true)
-        }
+        sendEmail(email: "Info@Havpd.org")
     }
     
     
@@ -136,15 +105,17 @@ class reportingResources: UIViewController, MFMailComposeViewControllerDelegate
     {
         sendEmail(email: "kjones@haverfordsd.net")
     }
+    
+    //email 
     func sendEmail(email: String)
  {
-        compileIncidentReport()
+        
         if MFMailComposeViewController.canSendMail()
         {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(["\(email)"])
-            mail.setMessageBody("<p>\(completeIncident)</p>", isHTML: true)
+            mail.setMessageBody("<p>\(incidentComplete)</p>", isHTML: true)
 
             present(mail, animated: true)
         } else {
@@ -161,6 +132,8 @@ class reportingResources: UIViewController, MFMailComposeViewControllerDelegate
         }
     
  }
+    //phone call
+    
     func makeACall(phoneNumber: Int, extensionNum: Int)
     {
         let extAlert = UIAlertController(title: "This counselors exention is \(extensionNum)", message: nil, preferredStyle: .alert)
@@ -177,17 +150,7 @@ class reportingResources: UIViewController, MFMailComposeViewControllerDelegate
       }
         
     }
-    func compileIncidentReport()
-    {
-        var name = nameTextField.text
-        var cell = cellTextField.text
-        var address = addressTextField.text
-        var date = dateTextField.text
-        var time = timeTextField.text
-        var profile = profileTextField.text
-        var incident = incidentTextField.text
-        completeIncident = "The following is an unoffical incident report completed voluntarily: \n Name: \(name) \n Cell: \(cell) \n Address: \(address) \n Date of incident: \(date) \n Time of Incident: \(time)\n Profile: \(profile)\n Incident Summary: \(incident) \n"
-    }
+    
 
 
 }

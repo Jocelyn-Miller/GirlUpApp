@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370E0B532582627900226E1A /* contactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0B522582627900226E1A /* contactCell.swift */; };
+		370E0B582582632F00226E1A /* conact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E0B572582632F00226E1A /* conact.swift */; };
 		378F3A16256D4A9E00666934 /* incidentReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F3A15256D4A9E00666934 /* incidentReport.swift */; };
+		37DE2475257FC16000EF6D7C /* ReportingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DE2474257FC16000EF6D7C /* ReportingTableView.swift */; };
+		37F21C4C257A7CAC0078E86A /* IncidentReportClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F21C4B257A7CAC0078E86A /* IncidentReportClass.swift */; };
 		37F4E9C8255986C500130957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4E9C7255986C500130957 /* AppDelegate.swift */; };
 		37F4E9CA255986C500130957 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4E9C9255986C500130957 /* SceneDelegate.swift */; };
 		37F4E9CC255986C500130957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4E9CB255986C500130957 /* ViewController.swift */; };
@@ -39,7 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		370E0B522582627900226E1A /* contactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactCell.swift; sourceTree = "<group>"; };
+		370E0B572582632F00226E1A /* conact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conact.swift; sourceTree = "<group>"; };
 		378F3A15256D4A9E00666934 /* incidentReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = incidentReport.swift; sourceTree = "<group>"; };
+		37DE2474257FC16000EF6D7C /* ReportingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingTableView.swift; sourceTree = "<group>"; };
+		37F21C4B257A7CAC0078E86A /* IncidentReportClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentReportClass.swift; sourceTree = "<group>"; };
 		37F4E9C4255986C500130957 /* Girl Up APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Girl Up APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F4E9C7255986C500130957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F4E9C9255986C500130957 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,13 +118,17 @@
 				37F4E9C7255986C500130957 /* AppDelegate.swift */,
 				37F4E9C9255986C500130957 /* SceneDelegate.swift */,
 				37F4E9CB255986C500130957 /* ViewController.swift */,
-				378F3A15256D4A9E00666934 /* incidentReport.swift */,
 				37F4E9CD255986C500130957 /* Main.storyboard */,
+				370E0B572582632F00226E1A /* conact.swift */,
+				370E0B522582627900226E1A /* contactCell.swift */,
 				37F4EA50255ADDB000130957 /* reportingResources.swift */,
+				37DE2474257FC16000EF6D7C /* ReportingTableView.swift */,
+				378F3A15256D4A9E00666934 /* incidentReport.swift */,
 				37F4EA4B255ADD9800130957 /* emotionalResources.swift */,
 				37F4EA46255ADD7000130957 /* InfoAndStatistics.swift */,
 				37F4E9D0255986C700130957 /* Assets.xcassets */,
 				37F4E9D2255986C700130957 /* LaunchScreen.storyboard */,
+				37F21C4B257A7CAC0078E86A /* IncidentReportClass.swift */,
 				37F4E9D5255986C700130957 /* Info.plist */,
 			);
 			path = "Girl Up APP";
@@ -270,12 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370E0B532582627900226E1A /* contactCell.swift in Sources */,
 				37F4EA47255ADD7000130957 /* InfoAndStatistics.swift in Sources */,
 				378F3A16256D4A9E00666934 /* incidentReport.swift in Sources */,
 				37F4E9CC255986C500130957 /* ViewController.swift in Sources */,
 				37F4EA51255ADDB000130957 /* reportingResources.swift in Sources */,
+				37F21C4C257A7CAC0078E86A /* IncidentReportClass.swift in Sources */,
 				37F4EA4C255ADD9800130957 /* emotionalResources.swift in Sources */,
 				37F4E9C8255986C500130957 /* AppDelegate.swift in Sources */,
+				370E0B582582632F00226E1A /* conact.swift in Sources */,
+				37DE2475257FC16000EF6D7C /* ReportingTableView.swift in Sources */,
 				37F4E9CA255986C500130957 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -437,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -454,6 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZN2276ZGAF;
 				INFOPLIST_FILE = "Girl Up APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,6 +489,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZN2276ZGAF;
 				INFOPLIST_FILE = "Girl Up APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
