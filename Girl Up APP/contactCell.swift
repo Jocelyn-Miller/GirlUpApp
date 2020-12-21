@@ -62,7 +62,7 @@ var contact = Contact(name: "jerry", number: 2674756824, Email: "joeymmiller@gma
             controller.dismiss(animated: true)
         }
     
-        print(contact.Email)
+        //print(contact.Email)
     }
 
 }

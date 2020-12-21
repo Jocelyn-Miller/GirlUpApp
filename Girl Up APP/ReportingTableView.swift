@@ -38,13 +38,13 @@ class ReportingTableView: UIViewController, UITableViewDelegate,  UITableViewDat
         myTableView.delegate = self
         //self.view = myTableView
         
-        let pell = Contact(name: "Mrs.Pellicane", number: 6108535900, Email: "lpellicane@haverfordsd.net")
-        let vindler = Contact(name: "Mrs.Vindler", number: 6108535900, Email: "kvindler@haverfordsd.net")
-        let costanzo = Contact(name: "Mrs.Costanzo", number: 6108535900, Email: "ccostanzo@haverfordsd.net")
-        let williams = Contact(name: "Mrs.Williams", number: 6108535900, Email: "mwilliams@haverfordsd.net")
-        let alderfer = Contact(name: "Mrs.Alderfer", number: 6108535900, Email: "aalderfer@haverfordsd.net")
-        let jones = Contact(name: "Mrs.Jones", number: 6108535900, Email: "kjones@haverfordsd.net")
-        let police = Contact(name: "police", number: 6108531298, Email: "Info@Havpd.org")
+        let pell = Contact(name: "Mrs. Pellicane", number: 6108535900, Email: "lpellicane@haverfordsd.net")
+        let vindler = Contact(name: "Mrs. Vindler", number: 6108535900, Email: "kvindler@haverfordsd.net")
+        let costanzo = Contact(name: "Mrs. Costanzo", number: 6108535900, Email: "ccostanzo@haverfordsd.net")
+        let williams = Contact(name: "Mrs. Williams", number: 6108535900, Email: "mwilliams@haverfordsd.net")
+        let alderfer = Contact(name: "Mrs. Alderfer", number: 6108535900, Email: "aalderfer@haverfordsd.net")
+        let jones = Contact(name: "Mrs. Jones", number: 6108535900, Email: "kjones@haverfordsd.net")
+        let police = Contact(name: "Police", number: 6108531298, Email: "Info@Havpd.org")
         
         contacts.append(police)
         
