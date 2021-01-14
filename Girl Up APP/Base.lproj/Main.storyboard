@@ -477,8 +477,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bFj-do-9hd">
-                                <rect key="frame" x="10" y="98" width="394" height="754"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bFj-do-9hd">
+                                <rect key="frame" x="10" y="160" width="394" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="75" id="qGu-Bf-V4L" customClass="contactCell" customModule="Girl_Up_APP" customModuleProvider="target">
@@ -495,6 +495,7 @@
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                     </state>
                                                     <connections>
+                                                        <action selector="sendEmail:" destination="6qW-Zn-ht1" eventType="touchUpInside" id="B0h-al-3U5"/>
                                                         <action selector="sendEmail:" destination="qGu-Bf-V4L" eventType="touchUpInside" id="Zif-gQ-Ace"/>
                                                     </connections>
                                                 </button>
@@ -506,6 +507,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="callPolice:" destination="qGu-Bf-V4L" eventType="touchUpInside" id="dYm-SC-yAQ"/>
+                                                        <action selector="callSomeone:" destination="6qW-Zn-ht1" eventType="touchUpInside" id="HT8-K3-klb"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -530,7 +532,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhu-Ur-6I8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="947"/>
+            <point key="canvasLocation" x="1831.8840579710147" y="946.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IU8-aO-aHF">

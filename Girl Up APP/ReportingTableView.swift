@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class ReportingTableView: UIViewController, UITableViewDelegate,  UITableViewDataSource
+class ReportingTableView: UIViewController, UITableViewDelegate,  UITableViewDataSource, MFMailComposeViewControllerDelegate
 {
     
     @IBOutlet weak var myTableView: UITableView!
@@ -58,6 +59,37 @@ class ReportingTableView: UIViewController, UITableViewDelegate,  UITableViewDat
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func sendEmail(_ sender: UIButton)
+    {
+        if MFMailComposeViewController.canSendMail()
+        {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["joeymmiller@gmail.com"])
+            mail.setMessageBody("<p>test complete</p>", isHTML: true)
+
+            present(mail, animated: true)
+        } else {
+            let alertWin = UIAlertController(title: "email send failed", message: nil, preferredStyle: .alert)
+           alertWin.addAction(UIAlertAction(title: NSLocalizedString("fork", comment: "Default action"), style: .default, handler: { _ in
+           NSLog("The \"OK\" alert occured.")
+           }))
+            self.present(alertWin, animated: true, completion: nil)
+        }
+        
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
+        {
+            controller.dismiss(animated: true)
+        }
+    
+    }
+    
+    
+    @IBAction func callSomeone(_ sender: UIButton)
+    {
+        
     }
     
 
