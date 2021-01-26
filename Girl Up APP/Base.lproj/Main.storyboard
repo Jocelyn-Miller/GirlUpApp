@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,7 +47,7 @@
                                             <color key="titleColor" red="0.93681567909999997" green="0.46264463659999999" blue="0.63762652870000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Buv-sw-TNy" kind="showDetail" id="Y6P-EU-aD6"/>
+                                            <segue destination="Buv-sw-TNy" kind="show" id="Lm1-pu-yZJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -419,10 +420,19 @@
             <objects>
                 <viewController id="Buv-sw-TNy" customClass="InfoAndStatistics" customModule="Girl_Up_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JYI-6A-QfL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information And Statistics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg9-Ie-I6u">
+                                <rect key="frame" x="31" y="133" width="353" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="y6E-95-bJS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.91333818440000003" green="0.4743821621" blue="0.65344607830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="c57-dz-j3P"/>
                 </viewController>
@@ -438,36 +448,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQg-Vx-vh7">
-                                <rect key="frame" x="109" y="127" width="197" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="TEST CALL"/>
-                                <connections>
-                                    <action selector="callCell:" destination="Idw-Hh-8r2" eventType="touchUpInside" id="hxF-UU-edr"/>
-                                    <action selector="testButton:" destination="Idw-Hh-8r2" eventType="touchUpInside" id="9oY-9Z-TxK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJf-aY-Q2U">
-                                <rect key="frame" x="109" y="370" width="197" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.41331622280000002" green="0.87956673070000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="TEST EMAIL"/>
-                                <connections>
-                                    <action selector="sendMail:" destination="Idw-Hh-8r2" eventType="touchUpInside" id="rBt-lD-bL3"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="uAg-j6-e3W">
+                                <rect key="frame" x="10" y="108" width="394" height="390"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emotional Resources" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zx9-wB-JKs">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="33"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pb0-tG-S68">
+                                        <rect key="frame" x="0.0" y="110" width="394" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text &quot;Care&quot; for 24/7 Crisis Support" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94H-ky-fan">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kq3-XT-qIW">
+                                                <rect key="frame" x="334" y="-1.5" width="60" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="4jI-P9-EUd"/>
+                                                    <constraint firstAttribute="height" constant="60" id="dCm-7K-Lht"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageReference key="backgroundImage" image="text.bubble.rtl" catalog="system" symbolScale="large" renderingMode="template"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23" scale="large" weight="bold"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="textCrisis:" destination="Idw-Hh-8r2" eventType="touchUpInside" id="RM7-kq-YdH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Me-04-hGb">
+                                        <rect key="frame" x="0.0" y="220" width="394" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call for 24/7 Crisis Support" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxy-Vn-KAX">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hiv-Rf-DHv">
+                                                <rect key="frame" x="334" y="-1.5" width="60" height="63"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="y0D-ra-Ss6"/>
+                                                    <constraint firstAttribute="width" constant="60" id="y3e-lu-U55"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageReference key="backgroundImage" image="phone" catalog="system" symbolScale="large" renderingMode="template"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="callCrisis:" destination="Idw-Hh-8r2" eventType="touchUpInside" id="Zsg-7X-lQa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dc-70-lpR">
+                                        <rect key="frame" x="0.0" y="330" width="394" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call for Sexual Assualt Hotline" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0n-9s-4K8">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coJ-Ep-4cb">
+                                                <rect key="frame" x="334" y="-1.5" width="60" height="63"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="6HG-cQ-Ffy"/>
+                                                    <constraint firstAttribute="height" constant="60" id="QHO-n1-wKp"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageReference key="backgroundImage" image="phone" catalog="system" symbolScale="large" renderingMode="template"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="callHotline:" destination="Idw-Hh-8r2" eventType="touchUpInside" id="O2L-DL-SPz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fef-Jt-zJo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.40192776920000001" green="0.55229049919999995" blue="0.88133805990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uAg-j6-e3W" firstAttribute="top" secondItem="fef-Jt-zJo" secondAttribute="top" constant="20" id="OmX-cc-xSS"/>
+                            <constraint firstItem="uAg-j6-e3W" firstAttribute="leading" secondItem="fef-Jt-zJo" secondAttribute="leading" constant="10" id="Zpq-dc-gO3"/>
+                            <constraint firstItem="fef-Jt-zJo" firstAttribute="trailing" secondItem="uAg-j6-e3W" secondAttribute="trailing" constant="10" id="uVd-fa-XqS"/>
+                            <constraint firstItem="fef-Jt-zJo" firstAttribute="bottom" secondItem="uAg-j6-e3W" secondAttribute="bottom" constant="20" id="wCu-sJ-Kza"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="raw-1w-HFc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJM-n1-UBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="1126"/>
+            <point key="canvasLocation" x="60.869565217391312" y="1125.6696428571429"/>
         </scene>
         <!--Reporting Table View-->
         <scene sceneID="OfP-vG-rTg">
@@ -557,7 +646,9 @@
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="lower hand" width="855" height="924"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="text.bubble.rtl" catalog="system" width="128" height="110"/>
         <image name="upper hand 3.0" width="855" height="924"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -567,9 +658,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
