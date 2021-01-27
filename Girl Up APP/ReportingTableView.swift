@@ -8,8 +8,45 @@
 import UIKit
 import MessageUI
 
-class ReportingTableView: UIViewController, UITableViewDelegate,  UITableViewDataSource, MFMailComposeViewControllerDelegate
+class ReportingTableView: UIViewController, UITableViewDelegate,  UITableViewDataSource, MFMailComposeViewControllerDelegate, customDelegate
 {
+    var incidentComplete = UserDefaults.standard.string(forKey: "completeIncident")
+
+    func call(number: Int)
+    {
+        print("call \(number)")
+        if let phoneCallURL = URL(string: "tel://\(number)") {
+        
+        let application:UIApplication = UIApplication.shared
+        if (application.canOpenURL(phoneCallURL)) {
+            application.open(phoneCallURL, options: [:], completionHandler: nil)
+        }
+      }
+
+    }
+    
+    func email(email: String)
+    {
+        if MFMailComposeViewController.canSendMail()
+        {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["\(email)"])
+            mail.setMessageBody("<p> \(incidentComplete) </p>", isHTML: true)
+
+            present(mail, animated: true)
+        } else {
+            let alertWin = UIAlertController(title: "email send failed", message: nil, preferredStyle: .alert)
+           alertWin.addAction(UIAlertAction(title: NSLocalizedString("fork", comment: "Default action"), style: .default, handler: { _ in
+           NSLog("The \"OK\" alert occured.")
+           }))
+            self.present(alertWin, animated: true, completion: nil)
+        }
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
+        {
+            controller.dismiss(animated: true)
+        }
+    }
     
     @IBOutlet weak var myTableView: UITableView!
      var contacts = [Contact]()
@@ -25,12 +62,12 @@ class ReportingTableView: UIViewController, UITableViewDelegate,  UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! contactCell
         cell.contact = contacts[indexPath.row]
         cell.textLabel?.text = cell.contact.name
+        cell.delegate = self
         
         return cell
     }
     
-
-
+   
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -61,36 +98,6 @@ class ReportingTableView: UIViewController, UITableViewDelegate,  UITableViewDat
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func sendEmail(_ sender: UIButton)
-    {
-        if MFMailComposeViewController.canSendMail()
-        {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(["joeymmiller@gmail.com"])
-            mail.setMessageBody("<p>test complete</p>", isHTML: true)
-
-            present(mail, animated: true)
-        } else {
-            let alertWin = UIAlertController(title: "email send failed", message: nil, preferredStyle: .alert)
-           alertWin.addAction(UIAlertAction(title: NSLocalizedString("fork", comment: "Default action"), style: .default, handler: { _ in
-           NSLog("The \"OK\" alert occured.")
-           }))
-            self.present(alertWin, animated: true, completion: nil)
-        }
-        
-        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
-        {
-            controller.dismiss(animated: true)
-        }
-    
-    }
-    
-    
-    @IBAction func callSomeone(_ sender: UIButton)
-    {
-        
-    }
     
 
 }

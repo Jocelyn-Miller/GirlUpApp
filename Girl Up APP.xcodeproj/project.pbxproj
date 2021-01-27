@@ -22,7 +22,6 @@
 		37F4E9EA255986C700130957 /* Girl_Up_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4E9E9255986C700130957 /* Girl_Up_APPUITests.swift */; };
 		37F4EA47255ADD7000130957 /* InfoAndStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4EA46255ADD7000130957 /* InfoAndStatistics.swift */; };
 		37F4EA4C255ADD9800130957 /* emotionalResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4EA4B255ADD9800130957 /* emotionalResources.swift */; };
-		37F4EA51255ADDB000130957 /* reportingResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4EA50255ADDB000130957 /* reportingResources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		37F4E9EB255986C700130957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37F4EA46255ADD7000130957 /* InfoAndStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAndStatistics.swift; sourceTree = "<group>"; };
 		37F4EA4B255ADD9800130957 /* emotionalResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emotionalResources.swift; sourceTree = "<group>"; };
-		37F4EA50255ADDB000130957 /* reportingResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reportingResources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +119,6 @@
 				37F4E9CD255986C500130957 /* Main.storyboard */,
 				370E0B572582632F00226E1A /* conact.swift */,
 				370E0B522582627900226E1A /* contactCell.swift */,
-				37F4EA50255ADDB000130957 /* reportingResources.swift */,
 				37DE2474257FC16000EF6D7C /* ReportingTableView.swift */,
 				378F3A15256D4A9E00666934 /* incidentReport.swift */,
 				37F4EA4B255ADD9800130957 /* emotionalResources.swift */,
@@ -286,7 +283,6 @@
 				37F4EA47255ADD7000130957 /* InfoAndStatistics.swift in Sources */,
 				378F3A16256D4A9E00666934 /* incidentReport.swift in Sources */,
 				37F4E9CC255986C500130957 /* ViewController.swift in Sources */,
-				37F4EA51255ADDB000130957 /* reportingResources.swift in Sources */,
 				37F21C4C257A7CAC0078E86A /* IncidentReportClass.swift in Sources */,
 				37F4EA4C255ADD9800130957 /* emotionalResources.swift in Sources */,
 				37F4E9C8255986C500130957 /* AppDelegate.swift in Sources */,

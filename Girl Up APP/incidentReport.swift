@@ -43,7 +43,9 @@ class incidentReport: UIViewController
         var time = timeTextField.text ?? "not listed"
         var profile = profileTextField.text ?? "not listed"
         var incident = incidentTextField.text ?? "not listed"
-        completeIncident = "The following is an unoffical incident report completed voluntarily: Name: \(name) Cell: \(cell) Address: \(address) Date of incident: \(date) Time of Incident: (time) Profile: \(profile) Incident Summary: \(incident)"
+        
+        completeIncident = "The following is an unoffical incident report completed voluntarily: \n Name: \(name) \n Cell: \(cell) \n Address: \(address) Date of incident: \(date) Time of Incident: \(time) Profile: \(profile) Incident Summary: \(incident)"
+        
         UserDefaults.standard.set(completeIncident, forKey: "completeIncident")
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
